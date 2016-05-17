@@ -11,7 +11,7 @@ export default class GitHubController {
       
     
       
-    var ref = new Firebase("https://githubangular.firebaseio.com/users");
+    var ref = new Firebase("https://raz.firebaseio.com/");
     var usersRef = ref.child(this.selectedUser);
     this.comment = $firebaseArray(usersRef);
 
@@ -27,7 +27,7 @@ export default class GitHubController {
       
   }
   
-  handleGetUserSuccess(response) {
+  handleGetUserSuccess(response)
     this.User = response.data;
     console.log(this.User);
   }
